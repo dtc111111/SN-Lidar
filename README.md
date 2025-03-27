@@ -49,10 +49,10 @@ This repository is the official PyTorch implementation for SN-LiDAR.
 <img src="./assets/novel.gif" width="80%"></img>
 
 - Novel LiDAR Poses
-<div align="center">
-  <img src="./assets/shift_x.gif" width="33%"/>
-  <img src="./assets/shift_y.gif" width="33%"/>
-  <img src="./assets/shift_z.gif" width="33%"/>
+<div>
+  <img src="./assets/shift_x.gif" width="30%"/>
+  <img src="./assets/shift_y.gif" width="30%"/>
+  <img src="./assets/shift_z.gif" width="30%"/>
 </div>
 
 - Novel LiDAR Configuration
