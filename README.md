@@ -7,7 +7,7 @@ Yi Chen*, Tianchen Deng*, Wentao Zhao, Xiaoning Wang, Wenqian Xi, Weidong Chen, 
 (* Equal contribution,† Corresponding author)  
 
 
-**[Paper]() | [Paper]() | [Project Page]() | [Video]() | [Poster]()**
+**[Paper]() | [Project Page]() | [Video]() | [Poster]()**
 
 This repository is the official PyTorch implementation for SN-LiDAR.
 
