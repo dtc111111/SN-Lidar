@@ -83,7 +83,25 @@ We propose SN-LiDAR, the first differential LiDAR-only framework for novel space
 git clone https://github.com/dtc111111/SN-Lidar.git
 cd SN-Lidar
 
-# TODO
+conda create -n sn-lidar python=3.9
+conda activate sn-lidar
+
+# PyTorch
+# CUDA 12.1
+pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu121
+# CUDA 11.8
+# pip install torch==2.1.0 torchvision==0.16.0 torchaudio==2.1.0 --index-url https://download.pytorch.org/whl/cu118
+# CUDA <= 11.7
+# pip install torch==2.0.0 torchvision torchaudio
+
+# Local compile for tiny-cuda-nn
+git clone --recursive https://github.com/nvlabs/tiny-cuda-nn
+cd tiny-cuda-nn/bindings/torch
+python setup.py install
+
+# compile packages in utils
+cd utils/chamfer3D
+python setup.py install
 ```
 
 
@@ -133,10 +151,27 @@ data
 
 ### 🚀 Run SN-LiDAR
 
+First, download pretrained [CENet](https://github.com/huixiancheng/CENet?tab=readme-ov-file#pretrained-models-and-logs) model trained on the KITTI dataset and place it with the path:
+```
+model/SalsaNext
+```
+
+Then, modify `run_kitti_sn.sh` by setting the appropriate values for `--config`, `--workspace`, and other parameters.
+Then execute the script with:
+```bash
+bash run_kitti_sn.sh
+```
+
 <a id="simulation"></a>
 
 ## 🕹️ Simulation
-
+After reconstruction, you can use the simulator to render and manipulate LiDAR point clouds in the whole scenario. It supports dynamic scene re-play, novel LiDAR configurations (`--fov_lidar`, `--H_lidar`, `--W_lidar`) and novel trajectory (`--shift_x`, `--shift_y`, `--shift_z`).    
+Check the sequence config and corresponding workspace and model path (`--ckpt`).  
+Run the following command:
+```bash
+bash run_kitti_sn_sim.sh
+```
+The results will be saved in the workspace folder.
 
 ## Acknowledgement
 We would like to thank all the pioneers [LiDAR-NeRF](https://github.com/tangtaogo/lidar-nerf), [LiDAR4D](https://github.com/ispc-lab/LiDAR4D), [CENet](https://github.com/huixiancheng/CENet).
