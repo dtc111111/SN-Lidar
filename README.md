@@ -7,7 +7,7 @@ Yi Chen*, Tianchen Deng*, Wentao Zhao, Xiaoning Wang, Wenqian Xi, Weidong Chen, 
 (* Equal contribution,† Corresponding author)  
 
 
-**[Paper]() | [Paper]() | [Project Page]() | [Video]() | [Poster]()**
+**[Paper]() | [Project Page]() | [Video]() | [Poster]()**
 
 This repository is the official PyTorch implementation for SN-LiDAR.
 
@@ -48,14 +48,14 @@ This repository is the official PyTorch implementation for SN-LiDAR.
 
 <img src="./assets/novel.gif" width="80%"></img>
 
-- Novel LiDAR Poses
+- Novel LiDAR Poses (X, Y, Z Shift)
 <div>
   <img src="./assets/shift_x.gif" width="30%"/>
   <img src="./assets/shift_y.gif" width="30%"/>
   <img src="./assets/shift_z.gif" width="30%"/>
 </div>
 
-- Novel LiDAR Configuration
+- Novel LiDAR Configuration (Beam change, Fov change)
 <div>
   <img src="./assets/beams.gif" width="38%"/>
   <img src="./assets/fovs.gif" width="38.4%"/>
